@@ -12,11 +12,18 @@
 完成之后在题目中点击提交实例，或者在[合约](https://sepolia.etherscan.io/address/0xa3e7317e591d5a0f1c605be1b3ac4d2ae56104d6#writeContract)上提交instance即可
 ![img.png](imgs/img1.png)
 
+成功后会有[LevelCompletedLog](https://sepolia.etherscan.io/tx/0x4d71303797a8c6452f856ada104f0f240691d5b59f827c9bf5c4ea2235ba7d86#eventlog)
+
+![img.png](imgs/img2.png)
+
+
 ## 参考
 
 https://book.getfoundry.sh/
 
 https://learnblockchain.cn/docs/foundry/i18n/zh/index.html
+
+https://decert.me/tutorial/solidity/tools/foundry
 
 ## 常用命令
 
@@ -29,5 +36,5 @@ $ forge test -vvvv --match-test testFallback
 ### forge运行脚本
 
 ```shell
-$ forge script script/Fallback.s.sol:FallbackScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+$ forge script script/Fallback.s.sol --broadcast --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
