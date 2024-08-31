@@ -22,6 +22,5 @@ contract FalloutTest is Test {
         fallout.Fal1out();
 
         assert(fallout.owner() == player);
-//        assert(fallout.owner(), player);
     }
 }
