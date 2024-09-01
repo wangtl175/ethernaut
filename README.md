@@ -30,11 +30,17 @@ https://decert.me/tutorial/solidity/tools/foundry
 ### forge测试
 
 ```shell
-$ forge test -vvvv --match-test testFallback
+forge test -vvvv --match-test testFallback
+```
+
+从指定fork后再运行测试
+
+```shell
+forge test -vvvv --match-test testFallback --fork-url <url>
 ```
 
 ### forge运行脚本
 
 ```shell
-$ forge script script/Fallback.s.sol --broadcast --rpc-url <your_rpc_url> --private-key <your_private_key>
+forge script script/Fallback.s.sol --broadcast --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
