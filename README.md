@@ -47,3 +47,9 @@ forge test -vvvv --match-test testFallback --fork-url <url>
 ```shell
 forge script script/Fallback.s.sol --broadcast --rpc-url <your_rpc_url> --private-key <your_private_key>
 ```
+
+指定运行的函数以及传入参数
+
+```shell
+forge script script/Elevator.s.sol --sig "signature of function" <paramters> --broadcast --rpc-url <your_rpc_url> --private-key <your_private_key>
+```

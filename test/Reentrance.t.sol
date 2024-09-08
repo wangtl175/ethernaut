@@ -12,6 +12,8 @@ import {ReentranceAttack} from "../src/ReentranceAttack.sol";
 /*
 require抛出的异常，似乎只会抛出一层，无法层层抛出
 
+call转账失败后，不会revert操作
+
 0.8.0版本后，会自动检查overflow
 */
 
