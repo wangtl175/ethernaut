@@ -128,3 +128,14 @@ contract DoubleEntryPoint is ERC20("DoubleEntryPointToken", "DET"), DelegateERC2
         return true;
     }
 }
+
+contract DetectionBot is IDetectionBot {
+    IForta public forta;
+    constructor(IForta _forta) {
+        forta = _forta;
+    }
+
+    function handleTransaction(address user, bytes calldata msgData) external override {
+        forta.raiseAlert(user);
+    }
+}
